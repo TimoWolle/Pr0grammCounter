@@ -1,0 +1,73 @@
+body {
+  background-color: #161618;
+  font-family: sans-serif;
+}
+
+h1, h3 {
+  color: #ee4d2e;
+  font-family: sans-serif;
+}
+
+p {
+  color: #888888;
+}
+
+pre {
+  color: #888888;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  font-size: 15px;
+}
+
+span {
+  background-color: #f18973;
+}
+
+#name {
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+}
+
+
+
+input.q {
+    width: 248px;   
+    
+    font-family: sans-serif;
+    font-size: 14px;
+    
+    margin: 0;
+    border: 0;
+    
+    background-color: #333;
+    color: #bbb;
+    
+    outline: none;
+    padding: 5px;
+    border-radius: 0;
+    
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.confirm-button:hover, input[type=button]:hover, input[type=button]:focus, input[type=submit]:hover, input[type=submit]:focus {
+    outline: none;
+    text-shadow: none;
+    color: #555;
+    background-color: #F5F7F6;
+}
+
+.confirm-button, input[type=button], input[type=submit] {
+    font-weight: normal;
+    display: inline-block;
+    text-align: center;
+    padding: 8px 8px 6px 8px;
+    margin: 0;
+    color: #F5F7F6;
+    cursor: pointer;
+    background-color: #ee4d2e;
+    background-color: var(--theme-main-color);
+    font-size: 12px;
+    --theme-main-color: #ee4d2e;
+    border-style: none;
+}
