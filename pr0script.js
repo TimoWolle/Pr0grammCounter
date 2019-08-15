@@ -55,53 +55,52 @@ function apiabfrage(pfad){
         
         success: function(data){
             var last_element = data[data.length - 1].data.id;
-            count = count + data.length
+            count = count + data.length;
             
             for (aktrow = 0; aktrow < data.length; aktrow++){
-                upvote   = upvote + data[aktrow].data.up
-                downvote = upvote + data[aktrow].data.down
+                upvote   = upvote + data[aktrow].data.up;
+                downvote = upvote + data[aktrow].data.down;
                 
-                vote = data[aktrow].data.up - data[aktrow].data.down
-                novote = data[aktrow].data.down - data[aktrow].data.up
+                vote = data[aktrow].data.up - data[aktrow].data.down;
+                novote = data[aktrow].data.down - data[aktrow].data.up;
                 
                 if(vote > highvote){
-                    highvote = vote
+                    highvote = vote;
                 }
                 
                 if(novote > minvote){
-                    minhvote = vote
+                    minhvote = vote;
                 }
                 
                 switch(true){
                     case (data[aktrow].data.promoted == 0):
-                        neuvote = neuvote + data[aktrow].data.up   
+                        neuvote = neuvote + data[aktrow].data.up;   
                     
                     case (data[aktrow].data.promoted == 1):
-                        belvote = belvote + data[aktrow].data.up   
+                        belvote = belvote + data[aktrow].data.up;   
                     
                         
                     case (data[aktrow].data.flags == 1):
-                        sfwvote = sfwvote + data[aktrow].data.up  
+                        sfwvote = sfwvote + data[aktrow].data.up; 
                         break;
                     
                     case (data[aktrow].data.flags == 2):
-                        nsfwvote = nsfwvote + data[aktrow].data.up   
-                        break
+                        nsfwvote = nsfwvote + data[aktrow].data.up;   
+                        break;
                     
                     case (data[aktrow].data.flags == 3):
-                        nsflvote = nsflvote + data[aktrow].data.up
-                        break
+                        nsflvote = nsflvote + data[aktrow].data.up;
+                        break;
                     
                 }
             }
                         
-            nowbeni = upvote - downvote
-            durchbeni = nowbeni / count
+            nowbeni = upvote - downvote;
+            durchbeni = nowbeni / count;
             
-            pfad = pfad + "?older=" + last_element
+            pfad = pfad + "?older=" + last_element;
                         
-            function apiabfrage(pfad)            
+            apiabfrage(pfad);
         }
     })
 }
-
