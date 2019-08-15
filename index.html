@@ -36,7 +36,7 @@ Dazu werde ich demnächst ebenfalls ein Tool Schreiben :)
 
             <div id="maindata">
                 <h3 id="name">Nutzername:</h3>
-                <input type="text" name="q" class="q" value="" title="Nach Nutzername Suchen" autocomplete="off" placeholder="z.b. TimoWolle">
+                <input type="text" id="nutzername" class="q" value="" title="Nach Nutzername Suchen" autocomplete="off" placeholder="z.b. TimoWolle">
 
                 <table>                
                     <tr>
@@ -69,7 +69,7 @@ Dazu werde ich demnächst ebenfalls ein Tool Schreiben :)
                     </tr>
                 </table>
 
-                <input type="button" id="search-submit-inline" class="pict" title="Suchen" value="Suche">
+                <input type="button" id="search-submit-inline" class="pict" title="Suchen" value="Suche" onclick=apiabfrage()>
             </div>
 
             <div id="request">
@@ -78,17 +78,17 @@ Dazu werde ich demnächst ebenfalls ein Tool Schreiben :)
                 <table>                
                     <tr>
                         <td><pre>Maximalen  Benis pro Post:</pre></td>
-                        <td><input type="text" class="q"></td>
+                        <td><input type="text" id="maxb" class="q"></td>
                     </tr>
 
                     <tr>
                         <td><pre>Geringsten Benis pro Post:</pre></td>
-                        <td><input type="text" class="q"></td>
+                        <td><input type="text" id="minb" class="q"></td>
                     </tr>
 
                     <tr>
                         <td><pre>Durchschnittliche Benis:</pre></td>
-                        <td><input type="text" class="q"></td>
+                        <td><input type="text" id="durb" class="q"></td>
                     </tr>
 
                     <td>
@@ -97,17 +97,17 @@ Dazu werde ich demnächst ebenfalls ein Tool Schreiben :)
 
                      <tr>
                         <td><pre>Safe For Work      (SFW) Max:</pre></td>
-                        <td><input type="text" class="q"></td>
+                        <td><input type="text" id="sfwb" class="q"></td>
                     </tr>
 
                     <tr>
                         <td><pre>Not Safe For Work (NSFW) Max:</pre></td>
-                        <td><input type="text" class="q"></td>
+                        <td><input type="text" id="nsfwb" class="q"></td>
                     </tr>
 
                     <tr>
                         <td><pre>Not Safe For Life (NSFL) Max:</pre></td>
-                        <td><input type="text" class="q"></td>
+                        <td><input type="text" id="nsflb" class="q"></td>
                     </tr>
 
                      <td>
@@ -116,12 +116,12 @@ Dazu werde ich demnächst ebenfalls ein Tool Schreiben :)
 
                      <tr>
                         <td><pre>Auf Beliebte Posts Max:</pre></td>
-                        <td><input type="text" class="q"></td>
+                        <td><input type="text" id="bmaxb" class="q"></td>
                     </tr>
 
                     <tr>
                         <td><pre>Auf Neu Posts Max:</pre></td>
-                        <td><input type="text" class="q"></td>
+                        <td><input type="text" id="naxb" class="q"></td>
                     </tr>
 
                     <td>
@@ -130,17 +130,17 @@ Dazu werde ich demnächst ebenfalls ein Tool Schreiben :)
 
                      <tr>
                         <td><pre>Insgesammte Blussi Votes:</pre></td>
-                        <td><input type="text" class="q"></td>
+                        <td><input type="text" id="plusb" class="q"></td>
                     </tr>
 
                     <tr>
                         <td><pre>Insgesammte Minus  Votes:</pre></td>
-                        <td><input type="text" class="q"></td>
+                        <td><input type="text" id="minb" class="q"></td>
                     </tr>              
 
                     <tr>
                         <td><pre>Insgesammte Benis von Posts:</pre></td>
-                        <td><input type="text" class="q"></td>
+                        <td><input type="text" id="insb" class="q"></td>
                     </tr>
                 </table>
             </div>
