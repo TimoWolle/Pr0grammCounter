@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
-    <link rel="stylesheet" type="text/css" href="pr0style.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="pr0style.css" media="screen" />
+        <script src="https://code.jquery.com/jquery-latest.js"></script>
+        <script type="text/javascript" src="pr0script.js"></script>
     </head>
 
     <body>
@@ -53,7 +55,12 @@ Dazu werde ich demnächst ebenfalls ein Tool Schreiben :)
                         <td><pre>Not Safe For Life (NSFL)</pre></td>
                         <td><input type="checkbox" class="c" name="work" value="nsfl"></td>
                     </tr>
-
+                    
+                    <tr>
+                        <td><pre>Not Safe For Pub. (NSFP)</pre></td>
+                        <td><input type="checkbox" class="c" name="work" value="nsfp"></td>
+                    </tr>
+                    
                     <td>
                         <br>
                     </td>  
@@ -69,12 +76,12 @@ Dazu werde ich demnächst ebenfalls ein Tool Schreiben :)
                     </tr>
                 </table>
 
-                <input type="button" id="search-submit-inline" class="pict" title="Suchen" value="Suche" onclick=apiabfrage()>
+                <input type="button" id="search-submit-inline" class="pict" title="Suchen" value="Suche" onclick=requesttring()>
             </div>
 
             <div id="request">
                 <br>
-                <h3 id="name">Auswertung:</h3>
+                <h3 id="ausw">Auswertung:</h3>
                 <table>                
                     <tr>
                         <td><pre>Maximalen  Benis pro Post:</pre></td>
@@ -98,30 +105,39 @@ Dazu werde ich demnächst ebenfalls ein Tool Schreiben :)
                      <tr>
                         <td><pre>Safe For Work      (SFW) Max:</pre></td>
                         <td><input type="text" id="sfwb" class="q"></td>
+                        <td><pre id="s"></pre></td>
                     </tr>
 
                     <tr>
                         <td><pre>Not Safe For Work (NSFW) Max:</pre></td>
                         <td><input type="text" id="nsfwb" class="q"></td>
+                        <td><pre id="w"></pre></td>
                     </tr>
 
                     <tr>
                         <td><pre>Not Safe For Life (NSFL) Max:</pre></td>
                         <td><input type="text" id="nsflb" class="q"></td>
+                        <td><pre id="l"></pre></td>
+                    </tr>
+                    
+                    <tr>
+                        <td><pre>Not Safe For Pub. (NSFP) Max:</pre></td>
+                        <td><input type="text" id="nsfpb" class="q"></td>
+                        <td><pre id="p"></pre></td>
                     </tr>
 
                      <td>
                         <br>
                     </td> 
 
-                     <tr>
-                        <td><pre>Auf Beliebte Posts Max:</pre></td>
-                        <td><input type="text" id="bmaxb" class="q"></td>
-                    </tr>
-
                     <tr>
-                        <td><pre>Auf Neu Posts Max:</pre></td>
-                        <td><input type="text" id="naxb" class="q"></td>
+                        <td><pre>Auf Neu      Posts Max:</pre></td>
+                        <td><input type="text" id="naxb" class="q" value="Tut grad nicht"></td>
+                    </tr>
+                    
+                    <tr>
+                        <td><pre>Auf Beliebte Posts Max:</pre></td>
+                        <td><input type="text" id="bmaxb" class="q" value="Tut grad nicht"></td>
                     </tr>
 
                     <td>
@@ -135,7 +151,7 @@ Dazu werde ich demnächst ebenfalls ein Tool Schreiben :)
 
                     <tr>
                         <td><pre>Insgesammte Minus  Votes:</pre></td>
-                        <td><input type="text" id="minb" class="q"></td>
+                        <td><input type="text" id="minusb" class="q"></td>
                     </tr>              
 
                     <tr>
